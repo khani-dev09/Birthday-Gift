@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="ambient"></div>
+<canvas id="fx-canvas"></canvas>
+
+<!-- ================= ENVELOPE ================= -->
+<section class="screen active" id="screen-envelope">
+  <div class="env-wrap">
+    <div class="envelope" id="envelope">
+      <div class="env-letter"></div>
+      <div class="env-body"></div>
+      <div class="env-flap"></div>
+      <div class="env-seal">❤</div>
+    </div>
+    <p class="env-caption">📩 <b>A special birthday delivery</b><br>has arrived.</p>
+    <button class="btn glow-pulse" id="openBtn">OPEN</button>
+  </div>
+</section>
+
+<!-- ================= 1. WELCOME ================= -->
+<section class="screen" id="screen-1">
+  <div class="glass mini-box">
+    <div class="eyebrow">🎉 Welcome</div>
+    <h2 class="mini-title"> Happy Birthday GODA </h2>
+    <p class="joke-line">You have successfully survived another year without getting arrested. That's impressive. 🎉</p>
+    <p class="joke-line"><b style="color:var(--gold2)">Breaking News 📰</b><br>Scientists have confirmed that you're officially Gayest Person on Earth</p>
+    <p class="joke-line"><b style="color:var(--gold2)">System Notification</b><br>Birthday mode has been activated. Cake cravings increased by 1000%.</p>
+    <button class="btn nav-btn" data-next="screen-2">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 2. SYSTEM UPDATE ================= -->
+<section class="screen" id="screen-2">
+  <div class="glass mini-box">
+    <div class="eyebrow">💻 System Update</div>
+    <h2 class="mini-title">Installing Birthday Update…</h2>
+    <div class="bar-track" style="margin-bottom:22px;"><div class="bar-fill" id="progressFill" style="transition:width 2.2s cubic-bezier(.2,.7,.2,1);"></div></div>
+    <div class="stat-row seq"><span>✔ Age Updated</span><span>+1</span></div>
+    <div class="stat-row seq"><span>✔ Patience </span><span>Reduced</span></div>
+    <div class="stat-row seq"><span>✔ Responsibilities Increased</span><span>100%</span></div>
+    <div class="stat-row seq"><span>✔ Sleep Schedule </span><span>Corrupted</span></div>
+    <div class="stat-row seq"><span>✔ Random Back Pain </span><span>Installed</span></div>
+    <p class="joke-line" style="margin-top:12px;text-align:center;">😂😂😂</p>
+    <button class="btn auto-btn" id="screen-2-continue" data-next="screen-stats">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 3. FUNNY STATS ================= -->
+<section class="screen" id="screen-stats">
+  <div class="glass mini-box">
+    <div class="eyebrow">📊 Funny Stats</div>
+    <h2 class="mini-title">Life Meter Scan</h2>
+    <div class="bar-row"><div class="bar-label"><span>Cake Capacity</span><span>100%</span></div><div class="bar-track"><div class="bar-fill" data-pct="100"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Wallet</span><span>20%</span></div><div class="bar-track"><div class="bar-fill" data-pct="20"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Energy</span><span>40%</span></div><div class="bar-track"><div class="bar-fill" data-pct="40"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Confidence</span><span>999%</span></div><div class="bar-track"><div class="bar-fill" data-pct="100"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Brain During Exams</span><span>5%</span></div><div class="bar-track"><div class="bar-fill" data-pct="5"></div></div></div>
+    <button class="btn auto-btn" id="screen-stats-continue" data-next="screen-3">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 4. ACHIEVEMENTS ================= -->
+<section class="screen" id="screen-3">
+  <div class="glass mini-box">
+    <div class="eyebrow">🏆 Achievements</div>
+    <h2 class="mini-title">Unlocked</h2>
+    <div class="badge seq"><div class="badge-icon">🍕</div><div class="badge-text">Professional Food Destroyer</div></div>
+    <div class="badge seq"><div class="badge-icon">📱</div><div class="badge-text">Certified Late Replier</div></div>
+    <div class="badge seq"><div class="badge-icon">⏰</div><div class="badge-text">King of "5 More Minutes"</div></div>
+    <div class="badge seq"><div class="badge-icon">💬</div><div class="badge-text">Master of Ignoring Messages</div></div>
+    <div class="badge seq"><div class="badge-icon">😴</div><div class="badge-text">Olympic Gold Medalist in Sleeping</div></div>
+    <div class="badge seq"><div class="badge-icon">🏳️‍🌈</div><div class="badge-text">official Member of LGBTQ+ community</div></div>
+    <div class="badge seq"><div class="badge-icon">📸</div><div class="badge-text">Unlimited Screenshot Storage</div></div>
+    <div class="badge seq"><div class="badge-icon">🎮</div><div class="badge-text">PUBG Master 😂</div></div>
+    <button class="btn auto-btn" id="screen-3-continue" data-next="screen-warning">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 5. FAKE WARNING ================= -->
+<section class="screen" id="screen-warning">
+  <div class="glass mini-box">
+    <div class="eyebrow">😂 Warning</div>
+    <h2 class="mini-title">⚠ WARNING</h2>
+    <div class="term">
+      <div class="line">Too much cake may cause:</div>
+      <div class="line ok">• Unlimited happiness</div>
+      <div class="line ok">• Sleepiness</div>
+      <div class="line bad">• Zero diet tomorrow</div>
+      <div class="line bad">• Financial damage to friends</div>
+    </div>
+    <button class="btn nav-btn" style="margin-top:20px;" data-next="screen-dna">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 6. GIFT DNA SCAN ================= -->
+<section class="screen" id="screen-dna">
+  <div class="glass mini-box">
+    <div class="eyebrow">🎁 Gift Box</div>
+    <h2 class="mini-title" id="screen-dna-loader">Scanning Birthday DNA…</h2>
+    <div class="check-row seq true">✔ Loves Free Food</div>
+    <div class="check-row seq true">✔ Accepts Expensive Gifts</div>
+    <div class="check-row seq true">✔ Loves Cakes 🍑</div>
+    <p class="joke-line" style="text-align:center;margin-top:6px;">😂😂😂</p>
+    <button class="btn auto-btn" id="screen-dna-continue" data-next="screen-terms">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 7. FAKE TERMS ================= -->
+<section class="screen" id="screen-terms">
+  <div class="glass mini-box">
+    <div class="eyebrow">🤣 Terms & Conditions</div>
+    <h2 class="mini-title">Before opening your gift</h2>
+    <p class="joke-line">You agree that:</p>
+    <div class="check-row">☑ You will share the cake.</div>
+    <div class="check-row">☑ You will reply to birthday wishes.</div>
+    <div class="check-row">☑ You will not disappear after eating.</div>
+    <div class="check-row">☑ You owe your best friend one treat.</div>
+    <button class="btn nav-btn" style="margin-top:18px;" data-next="screen-maturity">I Agree →</button>
+  </div>
+</section>
+
+<!-- ================= 8. FAKE LOADING - MATURITY ================= -->
+<section class="screen" id="screen-maturity">
+  <div class="glass mini-box">
+    <div class="eyebrow">📱 Loading</div>
+    <h2 class="mini-title">Searching for Maturity…</h2>
+    <div class="loader-pct" id="screen-maturity-pct">0%</div>
+    <div class="loader-text seq" id="screen-maturity-result" style="margin-top:12px;">❌ Error. No maturity found.<br><span style="opacity:0.8;">🤣🤣🤣</span></div>
+    <button class="btn auto-btn" id="screen-maturity-continue" data-next="screen-ai">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 9. AI SCAN ================= -->
+<section class="screen" id="screen-ai">
+  <div class="glass mini-box">
+    <div class="eyebrow">🤖 AI Scan</div>
+    <h2 class="mini-title">Running AI Analysis…</h2>
+    <div class="stat-row seq"><span>Favorite Hobby</span><span>Sleeping 😴</span></div>
+    <div class="stat-row seq"><span>Second Hobby</span><span>PUBG 🎮</span></div>
+    <div class="stat-row seq"><span>Third Hobby</span><span>Ignoring Messages 📱</span></div>
+    <button class="btn auto-btn" id="screen-ai-continue" data-next="screen-iq">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 10. INTELLIGENCE TEST ================= -->
+<section class="screen" id="screen-iq">
+  <div class="glass mini-box">
+    <div class="eyebrow">🧠 Intelligence Test</div>
+    <h2 class="mini-title">IQ Scan Complete</h2>
+    <div class="bar-row"><div class="bar-label"><span>Common Sense</span><span></span></div><div class="bar-track"><div class="bar-fill" data-pct="60"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Gaming Skills</span><span></span></div><div class="bar-track"><div class="bar-fill" data-pct="10"></div></div></div>
+    <div class="bar-row"><div class="bar-label"><span>Making Excuses</span><span></span></div><div class="bar-track"><div class="bar-fill" data-pct="100"></div></div></div>
+    <p class="joke-line" style="text-align:center;margin-top:6px;">😂😂😂</p>
+    <button class="btn auto-btn" id="screen-iq-continue" data-next="screen-finance">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 11. FINANCIAL REPORT ================= -->
+<section class="screen" id="screen-finance">
+  <div class="glass mini-box">
+    <div class="eyebrow">💰 Financial Report</div>
+    <h2 class="mini-title">Bank Balance</h2>
+    <div class="loader-text" id="screen-finance-loading">Loading…</div>
+    <div class="loader-text seq" id="screen-finance-result" style="margin-top:8px;">
+      <div style="font-size:28px;font-weight:700;color:var(--pink);">404</div>
+      <div>Money Not Found</div>
+      <div style="margin-top:6px;opacity:0.8;">🤣🤣🤣</div>
+    </div>
+    <button class="btn auto-btn" id="screen-finance-continue" data-next="screen-friend">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 12. FRIENDSHIP CARD ================= -->
+<section class="screen" id="screen-friend">
+  <div class="glass mini-box">
+    <div class="eyebrow">❤️ Friendship Card</div>
+    <h2 class="mini-title">Congratulations!</h2>
+    <p class="joke-line">You unlocked another year of annoying your best friend.</p>
+    <p class="joke-line">Lifetime membership renewed successfully. ✔</p>
+    <button class="btn nav-btn" data-next="screen-4">Continue →</button>
+  </div>
+</section>
+
+<!-- ================= 13. QUIZ ================= -->
+<section class="screen" id="screen-4">
+  <div class="glass mini-box">
+    <h2 class="mini-title">Who is the Gayest person today? 🤔</h2>
+    <button class="quiz-opt" data-quiz>Me 😎</button>
+    <button class="quiz-opt" data-quiz>Still Me 😎</button>
+    <button class="quiz-opt" data-quiz>Obviously Me 😎</button>
+    <button class="btn auto-btn" id="card4-reveal" data-next="screen-5">Reveal My Gift 🎁</button>
+  </div>
+</section>
+
+<!-- ================= 14. GIFT TAP ================= -->
+<section class="screen" id="screen-5">
+  <div class="gift-wrap">
+    <div class="gift-box" id="giftBox">
+      <div class="gift-bow"></div>
+      <div class="gift-lid"></div>
+      <div class="gift-body"></div>
+      <div class="gift-ribbon-v"></div>
+      <div class="gift-ribbon-h"></div>
+    </div>
+    <p class="gift-caption">Your gift is locked. <b>Tap the gift 5 times</b> to unlock it.</p>
+    <div class="tap-count" id="tapCount">0 / 5 taps</div>
+  </div>
+</section>
+
+<!-- ================= FINAL SCREEN ================= -->
+<section class="screen" id="screen-final">
+  <div class="glass mini-box final-box">
+    <div class="final-emoji">🎉🎁</div>
+    <h1> <h3>Congratulations!</h3> USMAN (GODA)</h1>
+    <div class="final-name" id="finalName">You have officially unlocked Level 21</div>
+
+    <div class="term" style="text-align:left;">
+      <div class="line" style="color:#fff;font-weight:600;margin-bottom:6px;">NEW FEATURES</div>
+      <div class="line">+ More <b class="ok">Responsibilities</b></div>
+      <div class="line">+ More <b class="ok">Bills</b></div>
+      <div class="line">− Less <b class="ok">Hair</b></div>
+      <div class="line">+ More <b class="ok">Memories</b></div>
+      <div class="line">+ Unlimited <b class="ok">Problems</b></div>
+    </div>
+
+    <p class="final-msg">May your year be filled with happiness, success, peace, health, unforgettable memories and unlimited cake. ❤️</p>
+    <div class="final-signature">Made with love (and way too much free time) by <b style="color:var(--gold2);">KHANIII</b> 😎</div>
+    <div id="gift-content"></div>
+
+    <button class="btn ghost secret-btn" id="secretGiftBtn">Click for Free Gift 🎁</button>
+    <div class="secret-reveal" id="secretGiftReveal">
+      <div class="secret-box">😂<br><br>Your real gift is having a friend like me.<br>You're welcome.</div>
+    </div>
+
+    <button class="btn ghost secret-btn" id="secretScanBtn">Run One More Scan 🔍</button>
+    <div class="secret-reveal" id="secretScanReveal">
+      <div class="secret-box">System Scan Complete<br><br>Status: <b style="color:var(--pink);">Still Single</b><br><br>😂😂😂</div>
+    </div>
+
+    <p class="final-ps" id="finalPs">P.S. — I spent hours coding this instead of sleeping, so you legally owe me a treat now. 🍰😂</p>
+  </div>
+</section>
+
+ <script src="main.js"></script>
+</body>
+</html>
